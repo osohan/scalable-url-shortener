@@ -1,0 +1,33 @@
+
+---
+
+spring:
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  main:
+    banner-mode: off
+
+logging:
+  level:
+    org.springframework: ERROR
+
+cassandra:
+  contactpoints: localhost
+  port: 9042
+  keyspace: test
+
+postgres:
+  drvierclass: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/postgres
+  username: postgres
+  password: 1q2w3e4r
+
+rangeSizeForCounter: 10
